@@ -20,6 +20,10 @@ GetData();
 
 async function PostData() {
     let image = document.querySelector('#image').value;
+    var isValid = /\.jpe?g$/i.test(imageInput.value);
+    if (!isValid) {
+return     ;
+ }
     let albumId = document.querySelector("#albumId").value; 
     let title = document.querySelector("#title").value;
     console.log(image);
